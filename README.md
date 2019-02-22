@@ -13,7 +13,7 @@ The neural networks were implemented in widely used deep learning framework `Ten
 
 ## How to run the code?
 
-Run `python main.py [mapping] [classifier]`
+Run: `python main.py [mapping] [classifier]`
 
 mapping: A2A, A2H, H2A, H2H <br>
 classifier: KNN, SVM-RBF
