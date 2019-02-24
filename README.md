@@ -49,8 +49,8 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 ### Accuracy
 
-<img src="Results/KNN/Top_5_Minimum_Classification_Loss_Mappings_(KNN).png" alt="drawing" width="600px"/>
-<img src="Results/KNN/Top_5_Maximum_Classification_Loss_Mappings_(KNN).png" alt="drawing" width="600px"/>
+<img src="Results/KNN/Top_5_Minimum_Accuracy_Delta_Mappings_(KNN).png" alt="drawing" width="600px"/>
+<img src="Results/KNN/Top_5_Maximum_Accuracy_Delta_Mappings_(KNN).png" alt="drawing" width="600px"/>
 
 ### RMSE loss vs Accuracy
 
@@ -71,8 +71,8 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 ### Accuracy
 
-<img src="Results/SVM/Top_5_Minimum_Classification_Loss_Mappings_(SVM).png" alt="drawing" width="600px"/>
-<img src="Results/SVM/Top_5_Maximum_Classification_Loss_Mappings_(SVM).png" alt="drawing" width="600px"/>
+<img src="Results/SVM/Top_5_Minimum_Accuracy_Delta_Mappings_(SVM).png" alt="drawing" width="600px"/>
+<img src="Results/SVM/Top_5_Maximum_Accuracy_Delta_Mappings_(SVM).png" alt="drawing" width="600px"/>
 
 ### RMSE loss vs Accuracy
 
