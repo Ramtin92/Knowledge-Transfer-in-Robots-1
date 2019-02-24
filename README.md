@@ -11,6 +11,10 @@ The neural networks were implemented in widely used deep learning framework `Ten
 `pip install matplotlib==3.0.0`<br>
 `pip install numpy==1.15.3`
 
+## Dataset
+
+- [Visualization of each modalities](DatasetVisualization.ipynb)
+
 ## How to run the code?
 
 Run: `python main.py [mapping] [classifier]`

@@ -42,12 +42,12 @@ if sys.argv[1] == 'A2A':
 	os.makedirs(LOGS_PATH, exist_ok=True)
 
 	# Source Robot data
-	A_PATH1 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "audio_10x10_datasets"
+	A_PATH1 = "Datasets" + os.sep + "audio_10x10_datasets"
 	SOURCE_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
 	"push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
 
 	# Target Robot data
-	A_PATH2 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "audio_10x10_datasets"
+	A_PATH2 = "Datasets" + os.sep + "audio_10x10_datasets"
 	TARGET_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
 	"push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
 elif sys.argv[1] == 'A2H':
@@ -55,12 +55,12 @@ elif sys.argv[1] == 'A2H':
 	os.makedirs(LOGS_PATH, exist_ok=True)
 
 	# Source Robot data
-	A_PATH1 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "audio_10x10_datasets"
+	A_PATH1 = "Datasets" + os.sep + "audio_10x10_datasets"
 	SOURCE_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
 	"push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
 
 	# Target Robot data
-	A_PATH2 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "proprioception_10x10_datasets"
+	A_PATH2 = r".." + os.sep + "Datasets" + os.sep + "proprioception_10x10_datasets"
 	TARGET_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
 	"lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
 	"push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
@@ -69,13 +69,13 @@ elif sys.argv[1] == 'H2A':
 	os.makedirs(LOGS_PATH, exist_ok=True)
 
 	# Source Robot data
-	A_PATH1 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "proprioception_10x10_datasets"
+	A_PATH1 = "Datasets" + os.sep + "proprioception_10x10_datasets"
 	SOURCE_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
 	"lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
 	"push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
 
 	# Target Robot data
-	A_PATH2 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "audio_10x10_datasets"
+	A_PATH2 = "Datasets" + os.sep + "audio_10x10_datasets"
 	TARGET_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
 	"push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
 elif sys.argv[1] == 'H2H':
@@ -83,13 +83,13 @@ elif sys.argv[1] == 'H2H':
 	os.makedirs(LOGS_PATH, exist_ok=True)
 
 	# Source Robot data
-	A_PATH1 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "proprioception_10x10_datasets"
+	A_PATH1 = "Datasets" + os.sep + "proprioception_10x10_datasets"
 	SOURCE_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
 	"lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
 	"push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
 
 	# Target Robot data
-	A_PATH2 = r".." + os.sep + "TraKnoBots_Datasets" + os.sep + "proprioception_10x10_datasets"
+	A_PATH2 = "Datasets" + os.sep + "proprioception_10x10_datasets"
 	TARGET_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
 	"lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
 	"push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
