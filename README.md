@@ -54,10 +54,10 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 <div class="row">
   <div class="column">
-    <img src="Results/KNN/Top_5_Minimum_Classification_Loss_Mappings_(KNN).png" alt="drawing">
+    <img src="Results/KNN/Top_5_Minimum_Classification_Loss_Mappings_(KNN).png" alt="drawing" width="400px">
   </div>
   <div class="column">
-    <img src="Results/KNN/Top_5_Maximum_Classification_Loss_Mappings_(KNN).png" alt="drawing">
+    <img src="Results/KNN/Top_5_Maximum_Classification_Loss_Mappings_(KNN).png" alt="drawing" width="400px">
   </div>
 </div>
 
