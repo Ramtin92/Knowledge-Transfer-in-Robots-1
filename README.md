@@ -43,3 +43,38 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 <img src="pics/Slide5.PNG" alt="drawing" width="600px"/>
 
+## Results
+
+## k-Nearest Neighbors (3-NN)
+
+### Accuracy
+
+<img src="Results/KNN/Top_5_Minimum_Classification_Loss_Mappings_(KNN).png" alt="drawing" width="600px"/>
+<img src="Results/KNN/Top_5_Maximum_Classification_Loss_Mappings_(KNN).png" alt="drawing" width="600px"/>
+
+<div class="row">
+  <div class="column">
+    <img src="Results/KNN/Top_5_Minimum_Classification_Loss_Mappings_(KNN).png" alt="drawing" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="Results/KNN/Top_5_Maximum_Classification_Loss_Mappings_(KNN).png" alt="drawing" style="width:100%">
+  </div>
+</div>
+
+### RMSE loss vs Accuracy
+
+### Accuracy Delta
+
+### RMSE loss vs Accuracy Delta
+
+## Results
+
+## Support Vector Machine (SVM-RBF) 
+
+### Accuracy
+
+### RMSE loss vs Accuracy
+
+### Accuracy Delta
+
+### RMSE loss vs Accuracy Delta
