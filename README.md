@@ -67,14 +67,26 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 <img src="Results/KNN/RMSELossvsAccuracyLossKNN_Train_3.png" alt="drawing" width="600px"/>
 
-## Results
-
 ## Support Vector Machine (SVM-RBF) 
 
 ### Accuracy
 
+<img src="Results/SVM/Top_5_Minimum_Classification_Loss_Mappings_(SVM).png" alt="drawing" width="600px"/>
+<img src="Results/SVM/Top_5_Maximum_Classification_Loss_Mappings_(SVM).png" alt="drawing" width="600px"/>
+
 ### RMSE loss vs Accuracy
+
+<img src="Results/SVM/RMSELossvsAccuracyKNN_Train_3.png" alt="drawing" width="600px"/>
 
 ### Accuracy Delta
 
+<img src="Results/SVM/Classification_Loss_A2A_2.png" alt="drawing" width="600px"/>
+<img src="Results/SVM/Classification_Loss_A2H_2.png" alt="drawing" width="600px"/>
+<img src="Results/SVM/Classification_Loss_H2A_2.png" alt="drawing" width="600px"/>
+<img src="Results/SVM/Classification_Loss_H2H_2.png" alt="drawing" width="600px"/>
+
 ### RMSE loss vs Accuracy Delta
+
+<img src="Results/SVM/RMSELossvsAccuracyLossKNN_Train_3.png" alt="drawing" width="600px"/>
+
+
