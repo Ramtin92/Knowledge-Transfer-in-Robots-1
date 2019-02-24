@@ -135,9 +135,8 @@ for a_source_dataset in SOURCE_DATASETS:
             interaction_data_1_train_repeat, interaction_data_2_train_repeat = repeat_trials(interaction_data_1_train, interaction_data_2_train)
 
             # Train the network
-            # cost_log = edn.train_session(interaction_data_1_train, interaction_data_2_train, a_map_run_log_path)
-            # cost_log = edn.train_session(interaction_data_1_train, interaction_data_2_train, None)  # if you dont want to save graph and summary
-            cost_log = edn.train_session(interaction_data_1_train_repeat, interaction_data_2_train_repeat, None)  # Repeat trials
+            # cost_log = edn.train_session(interaction_data_1_train_repeat, interaction_data_2_train_repeat, a_map_run_log_path)  # save graph and summary
+            cost_log = edn.train_session(interaction_data_1_train_repeat, interaction_data_2_train_repeat, None)  # # don't save graph and summary
             plot_loss_curve(cost_log, a_map_run_log_path, title_name_end="_Loss.png", xlabel='Training Iterations', ylabel='Loss')
             save_cost_csv(cost_log, a_map_run_log_path, csv_name_end="_Loss.csv")
 
@@ -152,12 +151,13 @@ for a_source_dataset in SOURCE_DATASETS:
                 writer = csv.writer(f, lineterminator="\n")
                 writer.writerow(["Test Loss", test_loss])
 
-            # Training on generated data and testing on read data
+            # Training on generated data and testing on real data
             generated_acc = object_based_5_fold_cross_validation(clf=CLF, data_train=generated_dataset,
                                                                  data_test=interaction_data_2_test,
                                                                  labels=category_labels_2_test,
                                                                  num_of_features=num_of_features_2)
             # If the target robot actually interacts
+            # Training and testing on real data
             actual_acc = object_based_5_fold_cross_validation(clf=CLF, data_train=interaction_data_2_test,
                                                               data_test=interaction_data_2_test,
                                                               labels=category_labels_2_test,
