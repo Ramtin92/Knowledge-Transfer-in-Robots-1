@@ -76,7 +76,7 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 ### RMSE loss vs Accuracy
 
-<img src="Results/SVM/RMSELossvsAccuracyKNN_Train_3.png" alt="drawing" width="600px"/>
+<img src="Results/SVM/RMSELossvsAccuracySVM-RBF_Train_3.png" alt="drawing" width="600px"/>
 
 ### Accuracy Delta
 
@@ -87,6 +87,6 @@ data from the source context (i.e., how well it would do if it transfered knowle
 
 ### RMSE loss vs Accuracy Delta
 
-<img src="Results/SVM/RMSELossvsAccuracyLossKNN_Train_3.png" alt="drawing" width="600px"/>
+<img src="Results/SVM/RMSELossvsAccuracyLossSVM-RBF_Train_3.png" alt="drawing" width="600px"/>
 
 
