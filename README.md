@@ -18,12 +18,12 @@ The neural networks were implemented in widely used deep learning framework `Ten
 
 ## How to run the code?
 
-Run: `python train.py [mapping] [classifier]`
+Run: `python main.py [mapping] [classifier]`
 
 mapping: A2A, A2H, H2A, H2H <br>
 classifier: KNN, SVM-RBF
 
-Example: `python train.py H2H SVM-RBF`
+Example: `python main.py H2H SVM-RBF`
 
 ## Experiment Pipeline 
 
