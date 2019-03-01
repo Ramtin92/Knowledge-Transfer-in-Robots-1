@@ -1,10 +1,11 @@
 import pickle
+import os
 
 import numpy as np
 import matplotlib.pyplot as plt
 
 from model import classifier
-from main import *
+from constant import *
 
 
 def time_taken(start, end):

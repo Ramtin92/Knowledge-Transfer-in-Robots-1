@@ -1,6 +1,7 @@
 import numpy as np
+import tensorflow as tf
 
-from main import *
+from constant import *
 
 
 def classifier(my_classifier, x_train_temp, x_test_temp, y_train_temp, y_test_temp):

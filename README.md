@@ -8,6 +8,7 @@ The neural networks were implemented in widely used deep learning framework `Ten
 
 `Python 3.5.6` is used for development and following packages are required to run the code:<br><br>
 `pip install tensorflow-gpu==1.12.0`<br>
+`pip install sklearn==0.20.0`<br>
 `pip install matplotlib==3.0.0`<br>
 `pip install numpy==1.15.3`
 
@@ -17,12 +18,12 @@ The neural networks were implemented in widely used deep learning framework `Ten
 
 ## How to run the code?
 
-Run: `python main.py [mapping] [classifier]`
+Run: `python train.py [mapping] [classifier]`
 
 mapping: A2A, A2H, H2A, H2H <br>
 classifier: KNN, SVM-RBF
 
-Example: `python main.py H2H SVM-RBF`
+Example: `python train.py H2H SVM-RBF`
 
 ## Experiment Pipeline 
 

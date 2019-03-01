@@ -1,18 +1,92 @@
 import csv
 import glob
 import time
+import os
+import sys
 import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+
 from numpy import genfromtxt
 import matplotlib.pyplot as plt
 
 from utils import find_modality_bin_behavior, read_dataset, get_data_label_for_given_labels, reshape_data_setting1, \
     object_based_5_fold_cross_validation, repeat_trials, time_taken
+from constant import *
 from model import EncoderDecoderNetwork
 
-from main import *
-
 tf.set_random_seed(1)
+
+if len(sys.argv) != 3:
+    print("Pass one of 1st arguments: A2A, A2H, H2A, H2H")
+    print("Pass one of 2nd arguments: KNN, SVM-RBF")
+    exit()
+
+if sys.argv[2] == 'KNN':
+    CLF = KNeighborsClassifier(n_neighbors=3)
+    CLF_NAME = "KNN"
+elif sys.argv[2] == 'SVM-RBF':
+    CLF = SVC(gamma='auto', kernel='rbf')
+    CLF_NAME = "SVM-RBF"
+
+if sys.argv[1] == 'A2A':
+    LOGS_PATH = r".." + os.sep + "Knowledge-Transfer-in-Robots_Results_A2A" + os.sep
+    os.makedirs(LOGS_PATH, exist_ok=True)
+
+    # Source Robot data
+    A_PATH1 = "Datasets" + os.sep + "audio_10x10_datasets"
+    SOURCE_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
+    "push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
+
+    # Target Robot data
+    A_PATH2 = "Datasets" + os.sep + "audio_10x10_datasets"
+    TARGET_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
+    "push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
+elif sys.argv[1] == 'A2H':
+    LOGS_PATH = r".." + os.sep + "Knowledge-Transfer-in-Robots_Results_A2H" + os.sep
+    os.makedirs(LOGS_PATH, exist_ok=True)
+
+    # Source Robot data
+    A_PATH1 = "Datasets" + os.sep + "audio_10x10_datasets"
+    SOURCE_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
+    "push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
+
+    # Target Robot data
+    A_PATH2 = r".." + os.sep + "Datasets" + os.sep + "proprioception_10x10_datasets"
+    TARGET_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
+    "lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
+    "push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
+elif sys.argv[1] == 'H2A':
+    LOGS_PATH = r".." + os.sep + "Knowledge-Transfer-in-Robots_Results_H2A" + os.sep
+    os.makedirs(LOGS_PATH, exist_ok=True)
+
+    # Source Robot data
+    A_PATH1 = "Datasets" + os.sep + "proprioception_10x10_datasets"
+    SOURCE_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
+    "lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
+    "push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
+
+    # Target Robot data
+    A_PATH2 = "Datasets" + os.sep + "audio_10x10_datasets"
+    TARGET_DATASETS = ["crush_audio.bin", "grasp_audio.bin", "hold_audio.bin", "lift_slow_audio.bin", "low_drop_audio.bin", "poke_audio.bin",
+    "push_audio.bin", "shake_audio.bin", "tap_audio.bin"]
+elif sys.argv[1] == 'H2H':
+    LOGS_PATH = r".." + os.sep + "Knowledge-Transfer-in-Robots_Results_H2H" + os.sep
+    os.makedirs(LOGS_PATH, exist_ok=True)
+
+    # Source Robot data
+    A_PATH1 = "Datasets" + os.sep + "proprioception_10x10_datasets"
+    SOURCE_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
+    "lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
+    "push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
+
+    # Target Robot data
+    A_PATH2 = "Datasets" + os.sep + "proprioception_10x10_datasets"
+    TARGET_DATASETS = ["crush_proprioception_10bin_features.bin", "grasp_proprioception_10bin_features.bin", "hold_proprioception_10bin_features.bin",
+    "lift_slow_proprioception_10bin_features.bin", "low_drop_proprioception_10bin_features.bin", "poke_proprioception_10bin_features.bin",
+    "push_proprioception_10bin_features.bin", "shake_proprioception_10bin_features.bin", "tap_proprioception_10bin_features.bin"]
+
 
 
 def plot_loss_curve(cost, save_path, title_name_end, xlabel, ylabel):
