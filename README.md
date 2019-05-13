@@ -39,7 +39,7 @@ Example: `python main.py H2H SVM-RBF`
 
 <img src="pics/Slide2.PNG" alt="drawing" width="600px"/>
 
-- Subsequently, the trained encoder-decoder network is used to generate “fake” sensory signals for the other 5 object categories (highlighted in dashed blue line) that the target robot did not interact with by projecting the sensory signal of the source robot.
+- Subsequently, the trained encoder-decoder network is used to generate “reconstructed” sensory signals for the other 5 object categories (highlighted in dashed blue line) that the target robot did not interact with by projecting the sensory signal of the source robot.
 
 <img src="pics/Slide3.PNG" alt="drawing" width="600px"/>
 
