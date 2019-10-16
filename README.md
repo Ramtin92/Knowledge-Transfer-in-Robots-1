@@ -35,7 +35,7 @@ Example: `python main.py H2H SVM-RBF`
 
 <img src="pics/Slide1.PNG" alt="drawing" width="600px"/>
 
-- The objects of 15 categories shared by both the robots are used to train the encoder-decoder network that learns to projects the sensory signal of the source robot to the target robot.
+- The objects of 15 categories shared by both the robots are used to train the encoder-decoder network that learns to project the sensory signal of the source robot to the target robot.
 
 <img src="pics/Slide2.PNG" alt="drawing" width="600px"/>
 
