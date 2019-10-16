@@ -4,6 +4,23 @@
 
 > Humans use exploratory behaviors coupled with multi-modal perception to learn about the objects around them. Research in robotics has shown that robots too can use such behaviors (e.g., grasping, pushing, shaking) to infer object properties that cannot always be detected using visual input alone. However, such learned representations are specific to each individual robot and cannot be directly transferred to another robot with different actions, sensors, and morphology. To address this challenge, we propose a framework for knowledge transfer across different behaviors and modalities that enables a source robot to transfer knowledge about objects to a target robot that has never interacted with them. The intuition behind our approach is that if two robots interact with a shared set of objects, the produced sensory data can be used to learn a mapping between the two robots' feature spaces. We evaluate the framework on a category recognition task using a dataset containing 9 robot behaviors performed multiple times on a set of 100 objects. The results show that the proposed framework can enable a target robot to perform category recognition on a set of novel objects and categories without the need to physically interact with the objects to learn the categorization model.
 
+Gyan Tatiya, Ramtin Hosseini, Michael C. Hughes and Jivko Sinapov, "<a href="https://www.eecs.tufts.edu/~gtatiya/files/2019/IEEE_ICDL_EPIROB_2019_gtatiya.pdf"><b>Sensorimotor Cross-Behavior Knowledge Transfer for Grounded Category Recognition</b></a>", IEEE 9th International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob), Oslo, Norway, Aug. 19-22, 2019.
+
+**Poster:**
+
+<img src="pics/IEEE_ICDL_EPIROB_2019_Poster.jpg" alt="drawing" width="900px"/>
+
+**BibTeX:**
+```
+@inproceedings{tatiya2019sensorimotor,
+  title={Sensorimotor Cross-Behavior Knowledge Transfer for Grounded Category Recognition},
+  author={Tatiya, Gyan and Hosseini, Ramtin and C. Hughes, Michael and Sinapov, Jivko},
+  booktitle={International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob)},
+  year={2019},
+  organization={IEEE}
+}
+```
+
 ## Development Environment
 For our research, we used 64-bit Ubuntu 16.04 based computer with 16 GB RAM, Intel Core i7-7700 CPU (3.20 GHz x 8 cores) and NVIDIA GeForce GTX 1060 (3GB RAM, 1280 CUDA Cores).
 The neural networks were implemented in widely used deep learning framework `TensorFlow 1.12` with GPU support (cuDNN 7, CUDA 9).
