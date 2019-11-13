@@ -14,8 +14,9 @@ Gyan Tatiya, Ramtin Hosseini, Michael C. Hughes and Jivko Sinapov, "<a href="htt
 ```
 @inproceedings{tatiya2019sensorimotor,
   title={Sensorimotor Cross-Behavior Knowledge Transfer for Grounded Category Recognition},
-  author={Tatiya, Gyan and Hosseini, Ramtin and C. Hughes, Michael and Sinapov, Jivko},
-  booktitle={International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob)},
+  author={Tatiya, Gyan and Hosseini, Ramtin and Hughes, Michael C and Sinapov, Jivko},
+  booktitle={2019 Joint IEEE 9th International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob)},
+  pages={1--6},
   year={2019},
   organization={IEEE}
 }
